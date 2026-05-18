@@ -61,7 +61,7 @@ jobs:
           docker tag $DOCKERHUB_IMAGE:$IMAGE_TAG $DOCKERHUB_IMAGE:latest
           docker push $DOCKERHUB_IMAGE:latest
 
- update-config:
+  update-config:
     name: Update Config Repo
     needs: ci
     runs-on: ubuntu-24.04
