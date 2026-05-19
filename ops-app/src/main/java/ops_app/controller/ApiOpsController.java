@@ -16,7 +16,7 @@ public class ApiOpsController {
 	 
 	 @GetMapping("/health")
 	 public String healthCheck() {
-	 	return "Get/api/health";
+	 	return "OK\n";
 	 }
 
 	 @GetMapping("/feat-ops")
