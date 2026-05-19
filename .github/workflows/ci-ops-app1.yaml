@@ -6,13 +6,13 @@ on:
     branches: [main]
     paths:
       - "ops-app1/**"
-      - ".github/workflows/ci-ops-app1.yml"
+      - ".github/workflows/ci-ops-app1.yaml"
 
 env:
   APP_NAME: ops-app1
   ECR_REPOSITORY: ops-app1
   AWS_REGION: ap-northeast-2
-  GITHUB_ORG: superb-dev
+  GITHUB_ORG: angHyekoung
   CONFIG_REPO: ${{ github.repository_owner }}/gitops-config
   CONFIG_REPO_PATH: apps/ops-app1/overlays
 

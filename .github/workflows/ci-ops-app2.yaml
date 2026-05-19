@@ -5,16 +5,16 @@ on:
   push:
     branches: [main]
     paths:
-      - "ops-app1/**"
-      - ".github/workflows/ci-ops-app2.yml"
+      - "ops-app2/**"
+      - ".github/workflows/ci-ops-app2.yaml"
 
 env:
   APP_NAME: ops-app2
   ECR_REPOSITORY: ops-app2
   AWS_REGION: ap-northeast-2
-  GITHUB_ORG: superb-dev
+  GITHUB_ORG: angHyekoung
   CONFIG_REPO: ${{ github.repository_owner }}/gitops-config
-  CONFIG_REPO_PATH: apps/ops-app/overlays
+  CONFIG_REPO_PATH: apps/ops-app1/overlays
 
 permissions:
   id-token: write # OIDC 토큰 발급 필수
