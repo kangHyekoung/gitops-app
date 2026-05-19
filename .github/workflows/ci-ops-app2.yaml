@@ -13,8 +13,8 @@ on:
 
 env:
   APP_NAME: ops-app2
-  DOCKERHUB_IMAGE: dockerlecture/ops-app2
-  CONFIG_REPO: Lecture-SHIN/gitops-config
+  DOCKERHUB_IMAGE: dockerlecture2/ops-app2
+  CONFIG_REPO: kangHyekoung/gitops-config
   CONFIG_REPO_PATH: apps/ops-app2/overlays
 
 permissions:
