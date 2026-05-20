@@ -103,6 +103,7 @@ jobs:
           cd config-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull origin main --rebase  # ← 이 줄 추가
           git add .
           git diff --staged --quiet || git commit \
             -m "chore: update ${{ env.APP_NAME }} dev image to ${FULL_URI} [skip ci]"
