@@ -6,11 +6,9 @@ spring:
     suffix: .html
     mode: HTML
     encoding: UTF-8
-    
 
 server:
   port: 8080
-  
 
 app:
   profile: ${PROFILE:default}
@@ -20,12 +18,22 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, metrics
+        include: health, info, metrics, prometheus
   endpoint:
     health:
       probes:
         enabled: true
-   #   show-details: when_authorized #여기 주석
+      #   show-details: when_authorized #여기 주석
+      livenessState:
+        enabled: true
+      readinessState:
+        enabled: true
+    prometheus:
+      access: read_only # /actuator/prometheus 접근 허용
+  metrics:
+    tags:
+      application: ${spring.application.name}
+      profile: ${app.profile:default}
 
 logging:
   level:
